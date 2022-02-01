@@ -6,7 +6,9 @@ sudo usermod -a -G microk8s adminuser
 sudo chown -f -R adminuser ~/.kube
 
 sudo microk8s status --wait-ready
-sudo microk8s enable dns storage ingress
+sudo microk8s enable dns storage ingress gpu
+# uncomment if gpu support is needed
+#sudo microk8s enable gpu
 sudo microk8s enable metallb:10.64.140.43-10.64.140.49,192.168.0.105-192.168.0.111
 
 sudo snap install juju --classic
