@@ -30,15 +30,7 @@ applications:
   kubeflow-volumes:              { charm: kubeflow-volumes,        channel: latest/stable, scale: 1 }
   metacontroller-operator:       { charm: metacontroller-operator, channel: latest/stable, scale: 1, trust: true }
   mlmd:                          { charm: mlmd,                    channel: latest/stable, scale: 1 }
-  minio:                         { charm: minio,                   channel: latest/edge, revision: 64, series: kubernetes, scale: 1,
-#                                   options: {
-#                                     mode: gateway,
-#                                     gateway-storage-service: azure,
-#                                     access-key: include-file://../secret/minio-sa-name,
-#                                     secret-key: include-file://../secret/minio-sa-key1,
-#                                     storage-service-endpoint: include-file://../secret/minio-sa-endpoint,
-#                                   }
-  }
+  minio:                         { charm: minio,                   channel: latest/edge, revision: 64, series: kubernetes, scale: 1 }
   oidc-gatekeeper:               { charm: oidc-gatekeeper,         channel: latest/edge, revision: 61, series: kubernetes, scale: 1 }
   seldon-controller-manager:     { charm: seldon-core,             channel: latest/edge, revision: 55, series: kubernetes, scale: 1 }
   tensorboard-controller:        { charm: tensorboard-controller,  channel: latest/stable, scale: 1 }
